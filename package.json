@@ -1,0 +1,29 @@
+{
+  "name": "iaedu-adapter",
+  "version": "0.1.0",
+  "description": "OpenWebUI to iaedu.pt API adapter — translates OpenAI format to FormData/NDJSON",
+  "type": "module",
+  "main": "adapter-server.mjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node adapter-server.mjs",
+    "dev": "node --watch adapter-server.mjs",
+    "test": "node --test test/*.mjs",
+    "smoke": "node test/smoke.mjs"
+  },
+  "keywords": [
+    "openwebui",
+    "adapter",
+    "iaedu",
+    "chatbot",
+    "middleware"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^5.6.1"
+  },
+  "devDependencies": {}
+}
