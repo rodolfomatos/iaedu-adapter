@@ -66,7 +66,7 @@
 ### [MEDIUM] SEC-002 — API key em plaintext no serviço systemd
 **Problema:** O README instrui a colocar a API key diretamente na linha `Environment=` do ficheiro `.service`.
 **Impacto:** Qualquer pessoa com acesso ao servidor ve a key em `/etc/systemd/system/iaedu-adapter.service`.
-**Workaround documentado no README** (EnvironmentFile), mas nao implementado.
+**Nota:** README.md ja usa `EnvironmentFile=` — CORRIGIDO. O .env.example existe e as permissoes `chmod 600` estao documentadas no README.
 **Esforço:** Baixo
 **Prioridade:** 5
 **Status:** TODO
@@ -111,8 +111,7 @@
 **Impacto:** Qualquer mudança precisa de testes manuais.
 **Esforço:** Médio
 **Prioridade:** 12
-**Status:** TODO
-**Soluçao:** Adicionar GitHub Actions com smoke test.
+**Status:** DONE — `.github/workflows/test.yml` com syntax check + smoke test em Node --test
 
 ---
 

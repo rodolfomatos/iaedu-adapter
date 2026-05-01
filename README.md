@@ -1,5 +1,7 @@
 # iaedu-adapter
 
+[![Test](https://github.com/rodolfomatos/iaedu-adapter/actions/workflows/test.yml/badge.svg)](https://github.com/rodolfomatos/iaedu-adapter/actions/workflows/test.yml)
+
 *Adapter* OpenWebUI para a API iaedu.pt. Traduz pedidos OpenAI em `multipart/form-data` e converte o stream NDJSON de resposta em SSE.
 
 ## O que faz
