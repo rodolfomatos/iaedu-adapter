@@ -36,9 +36,9 @@ cp .env.example .env
 npm start
 ```
 
-## Configuracao (variaveis de ambiente)
+## Configuração (variáveis de ambiente)
 
-| Variavel | Obrigatorio | Default | Descricao |
+| Variável | Obrigatório | Default | Descrição |
 |----------|-------------|---------|-----------|
 | `IAEDU_API_KEY` | Sim | — | Chave API da iaedu.pt |
 | `IAEDU_ENDPOINT` | Nao | URL hardcoded | Endpoint da stream API |
@@ -48,9 +48,9 @@ npm start
 | `SERVER_HOST` | Nao | `0.0.0.0` | Interface de bind |
 | `REQUEST_TIMEOUT_MS` | Nao | `60000` | Timeout por pedido (ms) |
 
-## Integracao com OpenWebUI
+## Integração com OpenWebUI
 
-1. Abrir OpenWebUI → Definicões → Ligacoes
+1. Abrir OpenWebUI → Definições → Ligações
 2. Configurar:
    - **URL Base:** `http://host.docker.internal:4000/v1` (ou IP do servidor)
    - **Chave API:** `dummy_key` (nao e usada pelo adapter)
@@ -58,7 +58,7 @@ npm start
 
 ## Endpoints
 
-| Metodo | Path | Descricao |
+| Método | Path | Descrição |
 |--------|------|-----------|
 | `POST` | `/v1/chat/completions` | Chat (formato OpenAI) |
 | `GET` | `/v1/models` | Lista de modelos |
@@ -127,11 +127,11 @@ IAEDU_API_KEY=... node test/test_speed.mjs
 IAEDU_API_KEY=... node test/test_latency.mjs
 ```
 
-## Limitaçoes conhecidas
+## Limitações conhecidas
 
-- **Threads efemeiras**: cada pedido e independente. O historico de conversa e enviado
+- **Threads efémeras**: cada pedido é independente. O histórico de conversa é enviado
   no campo `messages` pelo OpenWebUI a cada pedido.
-- Nao ha retry automatico em falhas upstream.
-- Nao ha rate limiting.
+- Não há retry automático em falhas upstream.
+- Não há rate limiting.
 
 Ver [docs/ROADMAP.md](docs/ROADMAP.md) para a lista completa de issues e prioridades.
