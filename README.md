@@ -22,6 +22,17 @@ OpenWebUI  →  [adapter:4000]  →  api.iaedu.pt
 - API key da iaedu.pt (obtida diretamente do fornecedor)
 - OpenWebUI a correr (provavelmente em Docker)
 
+## Execução a partir do código-fonte
+
+Para executar o adapter localmente a partir do código-fonte:
+
+1. **Instalar dependências**: `npm ci`
+2. **Configurar variáveis de ambiente**: copiar `.env.example` para `.env` e preencher a `IAEDU_API_KEY`
+3. **Arrancar o adapter**: `npm start`
+   - Para desenvolvimento com auto-reload: `npm run dev`
+4. **Verificar funcionamento**: `curl http://localhost:4000/health`
+5. **Executar testes**: `npm test`
+
 ## Instalacao rapida
 
 ```bash
