@@ -75,9 +75,6 @@ const chatCompletionSchema = {
   },
 };
 
-// Health check startup time for uptime calculation
-const START_TIME = new Date();
-
 fastify.post(
   '/v1/chat/completions',
   {
@@ -94,21 +91,24 @@ fastify.post(
 
     // Validate required configuration
     if (!apiKey) {
-      return reply
-        .status(400)
-        .send({
-          error:
-            'Missing required configuration: IAEDU_API_KEY (via header x-iaedu-api-key/x-api-key or env var)',
-        });
+      return reply.status(400).send({
+        error:
+          'Missing required configuration: IAEDU_API_KEY (via header x-iaedu-api-key/x-api-key or env var)',
+      });
     }
 
     if (!channelId) {
-      return reply
-        .status(400)
-        .send({
-          error:
-            'Missing required configuration: IAEDU_CHANNEL_ID (via header x-iaedu-channel-id or env var)',
-        });
+      return reply.status(400).send({
+        error:
+          'Missing required configuration: IAEDU_CHANNEL_ID (via header x-iaedu-channel-id or env var)',
+      });
+    }
+
+    if (!channelId) {
+      return reply.status(400).send({
+        error:
+          'Missing required configuration: IAEDU_CHANNEL_ID (via header x-iaedu-channel-id or env var)',
+      });
     }
 
     const requestBody = request.body;
@@ -212,7 +212,9 @@ fastify.post(
       let buffer = '';
 
       // Process the NDJSON stream from upstream
+      /* eslint-disable no-constant-condition */
       while (true) {
+        /* eslint-enable no-constant-condition */
         const { done, value } = await reader.read();
         if (done) break;
 
@@ -262,8 +264,8 @@ fastify.post(
         model: MODEL_NAME,
         choices: [{ index: 0, delta: {}, finish_reason: 'stop' }],
       });
-      reply.raw.write(`data: ${finishChunk}\n\n`);
-      reply.raw.write(`data: [DONE]\n\n`);
+      reply.raw.write('data: ${finishChunk}\n\n');
+      reply.raw.write('data: [DONE]\n\n');
       reply.raw.end();
 
       fastify.log.info({ threadId }, 'Stream concluído com sucesso');
@@ -329,17 +331,15 @@ fastify.get('/health', async (req, reply) => {
   });
 });
 
-fastify.get('/ready', async (req, reply) => {
+fastify.get('/ready', async (_req, reply) => {
   // Check if we have the minimum required configuration
   // Note: We can't fully validate without a request, but we can check env vars
-  const apiKey =
-    process.env.IAEDU_API_KEY || // Env var check
-    false; // Would need actual request to check headers
+  // Would need actual request to check headers
 
   // For readiness, we check that essential env vars are set
   // Headers validation happens per-request
   const hasApiKey = !!process.env.IAEDU_API_KEY;
-  const hasChannelId = !!process.env.IAEDU_CHANNEL_ID; // Optional but recommended
+  // const hasChannelId = !!process.env.IAEDU_CHANNEL_ID; // Optional but recommended - kept for symmetry but not used
 
   if (!hasApiKey) {
     return reply.status(503).send({
@@ -363,7 +363,7 @@ const start = async () => {
         endpoint: IAEDU_ENDPOINT,
         timeoutMs: REQUEST_TIMEOUT_MS,
       },
-      `Adapter IAEDU v7 (Unified) iniciado`
+      'Adapter IAEDU v7 (Unified) iniciado'
     );
 
     // Log configuration sources (without exposing secrets)

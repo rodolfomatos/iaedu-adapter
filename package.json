@@ -7,8 +7,8 @@
   "scripts": {
     "start": "node adapter-server.mjs",
     "dev": "node adapter-server.mjs",
-    "test": "node test/",
-    "test:watch": "node test/ --watch",
+    "test": "node test/basic.test.mjs",
+    "test:watch": "node test/basic.test.mjs --watch",
     "lint": "npx eslint . --ext .js,.mjs",
     "lint:fix": "npx eslint . --ext .js,.mjs --fix",
     "format": "npx prettier --write .",
@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "eslint": "^8.57.0",
+    "node-fetch": "^3.3.2",
     "prettier": "^3.3.2"
   }
 }

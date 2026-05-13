@@ -27,7 +27,7 @@ test('Adapter starts and responds to health check', async () => {
   } finally {
     // Clean up process
     try {
-      execSync('pkill -f "adapter-server.mjs"', { stdio: 'ignore' });
+      execSync('pkill -f adapter-server.mjs', { stdio: 'ignore' });
     } catch (err) {
       // Ignore if process already died
     }

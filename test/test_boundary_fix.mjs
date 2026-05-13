@@ -1,27 +1,27 @@
-// Ficheiro: test_final_debug.mjs
+// Ficheiro: test_boundary_fix.mjs
 // Objetivo: Teste robusto com correção de 'duplex' e URL para evitar hanging.
 
-import { performance } from "perf_hooks";
+import { performance } from 'perf_hooks';
 
 // 1. Correção do URL (Removida a dupla barra // antes de api)
 const ENDPOINT =
-  "https://api.iaedu.pt/agent-chat/api/v1/agent/cmamvd3n40000c801qeacoad2/stream";
+  'https://api.iaedu.pt/agent-chat/api/v1/agent/cmamvd3n40000c801qeacoad2/stream';
 const API_KEY = process.env.IAEDU_API_KEY;
 if (!API_KEY) {
-  console.error("ERRO: IAEDU_API_KEY não definida na variável de ambiente");
-  console.error("Defina: export IAEDU_API_KEY=sk-usr-...");
+  console.error('ERRO: IAEDU_API_KEY não definida na variável de ambiente');
+  console.error('Defina: export IAEDU_API_KEY=sk-usr-...');
   process.exit(1);
 }
-const CHANNEL_ID = "cmh0rfgmn0i64j801uuoletwy";
+const CHANNEL_ID = 'cmh0rfgmn0i64j801uuoletwy';
 
 async function testRobustRequest() {
-  console.log("--- A iniciar teste ROBUSTO ---");
+  console.log('--- A iniciar teste ROBUSTO ---');
 
   const formData = new FormData();
-  formData.append("channel_id", CHANNEL_ID);
-  formData.append("thread_id", `test-debug-${Date.now()}`);
-  formData.append("user_info", "{}");
-  formData.append("message", "Isto é um teste de conectividade.");
+  formData.append('channel_id', CHANNEL_ID);
+  formData.append('thread_id', `test-debug-${Date.now()}`);
+  formData.append('user_info', '{}');
+  formData.append('message', 'Isto é um teste de conectividade.');
 
   // Controlador de Timeout (para não ficares pendurado para sempre)
   const controller = new AbortController();
@@ -31,21 +31,21 @@ async function testRobustRequest() {
 
   try {
     console.log(`URL: ${ENDPOINT}`);
-    console.log("A enviar pedido...");
+    console.log('A enviar pedido...');
 
     const response = await fetch(ENDPOINT, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "x-api-key": API_KEY,
+        'x-api-key': API_KEY,
         // NOTA: Não definimos Content-Type, o fetch gera-o com o boundary correto.
         // Forçamos o fecho da conexão para evitar hanging de keep-alive
-        Connection: "close",
+        Connection: 'close',
       },
       body: formData,
 
       // CRÍTICO PARA NODE.JS:
       // Define o modo duplex para streams. Resolve problemas de hanging em POSTs.
-      duplex: "half",
+      duplex: 'half',
 
       signal: controller.signal,
     });
@@ -58,17 +58,19 @@ async function testRobustRequest() {
 
     if (!response.ok) {
       const text = await response.text();
-      console.error("ERRO CORPO:", text);
+      console.error('ERRO CORPO:', text);
       return;
     }
 
     // Leitura do Stream
-    console.log("--- A ler Stream ---");
+    console.log('--- A ler Stream ---');
     const reader = response.body.getReader();
     const decoder = new TextDecoder();
     let chunkCount = 0;
 
+    /* eslint-disable no-constant-condition */
     while (true) {
+      /* eslint-enable no-constant-condition */
       const { done, value } = await reader.read();
       if (done) break;
 
@@ -77,18 +79,18 @@ async function testRobustRequest() {
 
       // Mostrar apenas o início para confirmar que chegam dados
       if (chunkCount === 1) {
-        console.log("Primeiros dados recebidos:");
-        console.log(chunk.substring(0, 100) + "...");
+        console.log('Primeiros dados recebidos:');
+        console.log(chunk.substring(0, 100) + '...');
       }
     }
-    console.log("\nStream concluído com sucesso.");
+    console.log('\nStream concluído com sucesso.');
   } catch (error) {
-    if (error.name === "AbortError") {
+    if (error.name === 'AbortError') {
       console.error(
-        "\nERRO: Timeout! O servidor não respondeu em 10 segundos.",
+        '\nERRO: Timeout! O servidor não respondeu em 10 segundos.'
       );
     } else {
-      console.error("\nERRO DE EXECUÇÃO:", error);
+      console.error('\nERRO DE EXECUÇÃO:', error);
     }
   } finally {
     clearTimeout(timeoutId);
