@@ -4,7 +4,11 @@
 async function testIAEduAPI() {
   const endpoint =
     'https://api.iaedu.pt/agent-chat/api/v1/agent/cmamvd3n40000c801qeacoad2/stream';
-  const apiKey = 'sk-usr-hlwl7kkgz8byfkzl3sb6umf33kw4rnx3e1o';
+  const apiKey = process.env.IAEDU_API_KEY;
+  if (!apiKey) {
+    console.error('ERRO: IAEDU_API_KEY não definida na variável de ambiente');
+    process.exit(1);
+  }
 
   // --- A ALTERAÇÃO ESTÁ AQUI ---
   // Em vez do ID antigo, vamos inventar um novo ID de thread.

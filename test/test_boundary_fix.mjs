@@ -9,7 +9,7 @@ const ENDPOINT =
 const API_KEY = process.env.IAEDU_API_KEY;
 if (!API_KEY) {
   console.error('ERRO: IAEDU_API_KEY não definida na variável de ambiente');
-  console.error('Defina: export IAEDU_API_KEY=sk-usr-...');
+  console.error('Defina: export IAEDU_API_KEY=sua_chave_aqui');
   process.exit(1);
 }
 const CHANNEL_ID = 'cmh0rfgmn0i64j801uuoletwy';
