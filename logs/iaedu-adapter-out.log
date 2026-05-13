@@ -1,0 +1,212 @@
+22:33:09: {"level":30,"time":1778621589886,"pid":211734,"hostname":"llm","msg":"Server listening at http://127.0.0.1:4000"}
+22:33:09: ========================================
+22:33:09:  Adaptador IAEDU v6 (Multi-Tenant)
+22:33:09: ========================================
+22:33:09:  Porta: 4000
+22:33:09:  Host: 127.0.0.1
+22:33:09:  Modo: Multi-tenant por headers
+22:33:09: 
+22:33:09:  Headers requeridos:
+22:33:09:    x-iaedu-api-key: API key da IAEDU
+22:33:09:    x-iaedu-channel-id: ID do canal
+22:33:09: 
+22:33:09:  Headers opcionais:
+22:33:09:    x-iaedu-agent-id: ID do agent (default: cmamvd3n4...)
+22:33:09: ========================================
+22:35:08: {"level":30,"time":1778621708683,"pid":211734,"hostname":"llm","reqId":"req-1","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":54658},"msg":"incoming request"}
+22:35:08: {"level":30,"time":1778621708714,"pid":211734,"hostname":"llm","msg":"Novo pedido. Thread: req-6795e2cd-1803-4a9a-9a6e-959f1d8f1c2f, Agent: cmamvd3n4000..."}
+22:35:18: {"level":30,"time":1778621718754,"pid":211734,"hostname":"llm","reqId":"req-1","res":{"statusCode":200},"responseTime":10070.574408993125,"msg":"request completed"}
+22:39:03: {"level":30,"time":1778621943538,"pid":211734,"hostname":"llm","reqId":"req-2","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":34806},"msg":"incoming request"}
+22:39:03: {"level":30,"time":1778621943539,"pid":211734,"hostname":"llm","msg":"Novo pedido. Thread: req-d86de149-d229-4a95-b9f7-e6018ac79492, Agent: cmamvd3n4000..."}
+22:39:04: {"level":30,"time":1778621944736,"pid":211734,"hostname":"llm","reqId":"req-2","res":{"statusCode":200},"responseTime":1197.4411299973726,"msg":"request completed"}
+22:44:05: {"level":30,"time":1778622245796,"pid":215972,"hostname":"llm","msg":"Server listening at http://127.0.0.1:4000"}
+22:44:05: ========================================
+22:44:05:  Adaptador IAEDU v6 (Multi-Tenant)
+22:44:05: ========================================
+22:44:05:  Porta: 4000
+22:44:05:  Host: 127.0.0.1
+22:44:05:  Modo: Multi-tenant por headers
+22:44:05: 
+22:44:05:  Headers requeridos:
+22:44:05:    x-iaedu-api-key: API key da IAEDU
+22:44:05:    x-iaedu-channel-id: ID do canal
+22:44:05: 
+22:44:05:  Headers opcionais:
+22:44:05:    x-iaedu-agent-id: ID do agent (default: cmamvd3n4...)
+22:44:05: ========================================
+22:44:15: {"level":30,"time":1778622255148,"pid":215972,"hostname":"llm","reqId":"req-1","req":{"method":"GET","url":"/health","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":59200},"msg":"incoming request"}
+22:44:15: {"level":30,"time":1778622255153,"pid":215972,"hostname":"llm","reqId":"req-1","res":{"statusCode":200},"responseTime":4.666962005198002,"msg":"request completed"}
+22:46:03: {"level":30,"time":1778622363704,"pid":215972,"hostname":"llm","reqId":"req-2","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":37382},"msg":"incoming request"}
+22:46:03: {"level":30,"time":1778622363735,"pid":215972,"hostname":"llm","msg":"Novo pedido. Thread: req-0ebc465a-9f89-47bb-bc05-3bc748ddd0f5, Agent: cmamvd3n4000..."}
+22:46:04: {"level":30,"time":1778622364978,"pid":215972,"hostname":"llm","reqId":"req-2","res":{"statusCode":200},"responseTime":1274.2473080009222,"msg":"request completed"}
+22:46:59: {"level":30,"time":1778622419775,"pid":215972,"hostname":"llm","reqId":"req-3","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":34098},"msg":"incoming request"}
+22:46:59: {"level":30,"time":1778622419776,"pid":215972,"hostname":"llm","msg":"Novo pedido. Thread: req-30b8409a-49c4-411c-9605-8e9d37f47947, Agent: cmamvd3n4000..."}
+22:47:00: {"level":30,"time":1778622420843,"pid":215972,"hostname":"llm","reqId":"req-3","res":{"statusCode":200},"responseTime":1068.0708419978619,"msg":"request completed"}
+22:52:28: {"level":30,"time":1778622748233,"pid":215972,"hostname":"llm","reqId":"req-4","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":52508},"msg":"incoming request"}
+22:52:28: {"level":30,"time":1778622748234,"pid":215972,"hostname":"llm","msg":"Novo pedido. Thread: req-67cac4dc-3aea-4518-99d0-7a3fd346a724, Agent: cmamvd3n4000..."}
+22:52:30: {"level":30,"time":1778622750038,"pid":215972,"hostname":"llm","reqId":"req-4","res":{"statusCode":200},"responseTime":1804.2542719990015,"msg":"request completed"}
+22:52:50: {"level":30,"time":1778622770537,"pid":215972,"hostname":"llm","reqId":"req-5","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":54822},"msg":"incoming request"}
+22:52:50: {"level":30,"time":1778622770538,"pid":215972,"hostname":"llm","msg":"Novo pedido. Thread: req-d7f92971-94fc-4f78-ba78-c33e2e09d409, Agent: cmamvd3n4000..."}
+22:53:02: {"level":30,"time":1778622782138,"pid":215972,"hostname":"llm","reqId":"req-5","res":{"statusCode":200},"responseTime":11600.030944995582,"msg":"request completed"}
+23:23:32: {"level":30,"time":1778624612671,"pid":215972,"hostname":"llm","reqId":"req-6","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":48052},"msg":"incoming request"}
+23:23:32: {"level":30,"time":1778624612672,"pid":215972,"hostname":"llm","msg":"Novo pedido. Thread: req-c384fe75-1758-4e7e-9ae7-cbe9a88b3df8, Agent: cmamvd3n4000..."}
+23:23:35: {"level":30,"time":1778624615201,"pid":215972,"hostname":"llm","reqId":"req-6","res":{"statusCode":200},"responseTime":2529.7835230007768,"msg":"request completed"}
+00:51:34: {"level":30,"time":1778629894942,"pid":264346,"hostname":"llm","msg":"Server listening at http://127.0.0.1:4000"}
+00:51:34: ========================================
+00:51:34:  Adaptador IAEDU v6 (Multi-Tenant)
+00:51:34: ========================================
+00:51:34:  Porta: 4000
+00:51:34:  Host: 127.0.0.1
+00:51:34:  Modo: Multi-tenant por headers
+00:51:34: 
+00:51:34:  Headers requeridos:
+00:51:34:    x-iaedu-api-key: API key da IAEDU
+00:51:34:    x-iaedu-channel-id: ID do canal
+00:51:34: 
+00:51:34:  Headers opcionais:
+00:51:34:    x-iaedu-agent-id: ID do agent (default: cmamvd3n4...)
+00:51:34: ========================================
+00:53:54: {"level":30,"time":1778630034767,"pid":267643,"hostname":"llm","msg":"Server listening at http://127.0.0.1:4000"}
+00:53:54: ========================================
+00:53:54:  Adaptador IAEDU v6 (Multi-Tenant)
+00:53:54: ========================================
+00:53:54:  Porta: 4000
+00:53:54:  Host: 127.0.0.1
+00:53:54:  Modo: Multi-tenant por headers
+00:53:54: 
+00:53:54:  Headers requeridos:
+00:53:54:    x-iaedu-api-key: API key da IAEDU
+00:53:54:    x-iaedu-channel-id: ID do canal
+00:53:54: 
+00:53:54:  Headers opcionais:
+00:53:54:    x-iaedu-agent-id: ID do agent (default: cmamvd3n4...)
+00:53:54: ========================================
+00:59:09: {"level":30,"time":1778630349123,"pid":270656,"hostname":"llm","msg":"Server listening at http://127.0.0.1:4000"}
+00:59:09: ========================================
+00:59:09:  Adaptador IAEDU v6 (Multi-Tenant)
+00:59:09: ========================================
+00:59:09:  Porta: 4000
+00:59:09:  Host: 127.0.0.1
+00:59:09:  Modo: Multi-tenant por headers
+00:59:09: 
+00:59:09:  Headers requeridos:
+00:59:09:    x-iaedu-api-key: API key da IAEDU
+00:59:09:    x-iaedu-channel-id: ID do canal
+00:59:09: 
+00:59:09:  Headers opcionais:
+00:59:09:    x-iaedu-agent-id: ID do agent (default: cmamvd3n4...)
+00:59:09: ========================================
+01:00:10: {"level":30,"time":1778630410250,"pid":272075,"hostname":"llm","msg":"Server listening at http://127.0.0.1:4000"}
+01:00:10: ========================================
+01:00:10:  Adaptador IAEDU v6 (Multi-Tenant)
+01:00:10: ========================================
+01:00:10:  Porta: 4000
+01:00:10:  Host: 127.0.0.1
+01:00:10:  Modo: Multi-tenant por headers
+01:00:10: 
+01:00:10:  Headers requeridos:
+01:00:10:    x-iaedu-api-key: API key da IAEDU
+01:00:10:    x-iaedu-channel-id: ID do canal
+01:00:10: 
+01:00:10:  Headers opcionais:
+01:00:10:    x-iaedu-agent-id: ID do agent (default: cmamvd3n4...)
+01:00:10: ========================================
+01:28:46: {"level":30,"time":1778632126944,"pid":272075,"hostname":"llm","reqId":"req-1","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":37972},"msg":"incoming request"}
+01:28:47: {"level":30,"time":1778632126979,"pid":272075,"hostname":"llm","msg":"Novo pedido. Thread: req-d896272a-9285-4614-9e1a-78afe2956704, Agent: cmamvd3n4000..."}
+01:28:55: {"level":30,"time":1778632135255,"pid":272075,"hostname":"llm","reqId":"req-1","res":{"statusCode":200},"responseTime":8310.218409001827,"msg":"request completed"}
+01:36:59: {"level":30,"time":1778632619889,"pid":272075,"hostname":"llm","reqId":"req-2","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":34790},"msg":"incoming request"}
+01:36:59: {"level":30,"time":1778632619892,"pid":272075,"hostname":"llm","msg":"Novo pedido. Thread: req-7dd63384-9edd-4b07-b4b0-0d1a74f5567c, Agent: cmamvd3n4000..."}
+01:37:03: {"level":30,"time":1778632623362,"pid":272075,"hostname":"llm","reqId":"req-2","res":{"statusCode":200},"responseTime":3473.2947960048914,"msg":"request completed"}
+09:26:02: {"level":30,"time":1778660762018,"pid":419151,"hostname":"llm","msg":"Server listening at http://127.0.0.1:4000"}
+09:26:02: ========================================
+09:26:02:  Adaptador IAEDU v6 (Multi-Tenant)
+09:26:02: ========================================
+09:26:02:  Porta: 4000
+09:26:02:  Host: 127.0.0.1
+09:26:02:  Modo: Multi-tenant por headers
+09:26:02: 
+09:26:02:  Headers requeridos:
+09:26:02:    x-iaedu-api-key: API key da IAEDU
+09:26:02:    x-iaedu-channel-id: ID do canal
+09:26:02: 
+09:26:02:  Headers opcionais:
+09:26:02:    x-iaedu-agent-id: ID do agent (default: cmamvd3n4...)
+09:26:02: ========================================
+09:40:09: {"level":30,"time":1778661609002,"pid":419151,"hostname":"llm","reqId":"req-1","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":55944},"msg":"incoming request"}
+09:40:09: {"level":30,"time":1778661609037,"pid":419151,"hostname":"llm","msg":"Novo pedido. Thread: req-aa5d0ec9-76fa-4952-9b00-09423c62ac88, Agent: cmamvd3n4000..."}
+10:01:06: {"level":30,"time":1778662866120,"pid":419151,"hostname":"llm","reqId":"req-2","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":60022},"msg":"incoming request"}
+10:01:06: {"level":30,"time":1778662866121,"pid":419151,"hostname":"llm","msg":"Novo pedido. Thread: req-57c6482d-ff6d-4cfe-97b4-689c6efaa6b1, Agent: cmamvd3n4000..."}
+10:01:19: {"level":30,"time":1778662879368,"pid":419151,"hostname":"llm","reqId":"req-2","res":{"statusCode":200},"responseTime":13247.877824991941,"msg":"request completed"}
+10:08:27: {"level":30,"time":1778663307410,"pid":419151,"hostname":"llm","reqId":"req-3","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":42736},"msg":"incoming request"}
+10:08:27: {"level":30,"time":1778663307411,"pid":419151,"hostname":"llm","msg":"Novo pedido. Thread: req-9a4cf54b-2ee5-43ac-b92c-32f3c60cd9f0, Agent: cmamvd3n4000..."}
+10:08:29: {"level":30,"time":1778663309046,"pid":419151,"hostname":"llm","reqId":"req-3","res":{"statusCode":200},"responseTime":1635.5244839936495,"msg":"request completed"}
+10:08:46: {"level":30,"time":1778663326795,"pid":419151,"hostname":"llm","reqId":"req-4","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":55544},"msg":"incoming request"}
+10:08:46: {"level":30,"time":1778663326795,"pid":419151,"hostname":"llm","msg":"Novo pedido. Thread: req-8ce9bd5e-74b8-43a1-b6a4-266b7cc66da5, Agent: cmamvd3n4000..."}
+10:08:49: {"level":30,"time":1778663329781,"pid":419151,"hostname":"llm","reqId":"req-4","res":{"statusCode":200},"responseTime":2986.169462993741,"msg":"request completed"}
+10:09:46: {"level":30,"time":1778663386133,"pid":419151,"hostname":"llm","reqId":"req-5","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":55042},"msg":"incoming request"}
+10:09:46: {"level":30,"time":1778663386134,"pid":419151,"hostname":"llm","msg":"Novo pedido. Thread: req-392de40e-935f-4e14-a997-10caaae89aca, Agent: cmamvd3n4000..."}
+10:09:52: {"level":30,"time":1778663392362,"pid":419151,"hostname":"llm","reqId":"req-5","res":{"statusCode":200},"responseTime":6228.437578007579,"msg":"request completed"}
+10:10:23: {"level":30,"time":1778663423320,"pid":419151,"hostname":"llm","reqId":"req-6","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":37434},"msg":"incoming request"}
+10:10:23: {"level":30,"time":1778663423321,"pid":419151,"hostname":"llm","msg":"Novo pedido. Thread: req-7fcffe77-f268-4206-8d60-070f832b0233, Agent: cmamvd3n4000..."}
+10:10:25: {"level":30,"time":1778663425373,"pid":419151,"hostname":"llm","reqId":"req-6","res":{"statusCode":200},"responseTime":2052.790835991502,"msg":"request completed"}
+10:13:10: {"level":30,"time":1778663590393,"pid":419151,"hostname":"llm","reqId":"req-7","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":33742},"msg":"incoming request"}
+10:13:10: {"level":30,"time":1778663590393,"pid":419151,"hostname":"llm","msg":"Novo pedido. Thread: req-6711d66a-b75d-4359-b753-e559d142a67f, Agent: cmamvd3n4000..."}
+10:13:11: {"level":30,"time":1778663591893,"pid":419151,"hostname":"llm","reqId":"req-7","res":{"statusCode":200},"responseTime":1499.7864439934492,"msg":"request completed"}
+10:13:47: {"level":30,"time":1778663627605,"pid":419151,"hostname":"llm","reqId":"req-8","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":53572},"msg":"incoming request"}
+10:13:47: {"level":30,"time":1778663627605,"pid":419151,"hostname":"llm","msg":"Novo pedido. Thread: req-e6cc3a68-e9dd-4873-bae2-de66990bf61f, Agent: cmamvd3n4000..."}
+10:13:53: {"level":30,"time":1778663633109,"pid":419151,"hostname":"llm","reqId":"req-8","res":{"statusCode":200},"responseTime":5504.118864998221,"msg":"request completed"}
+10:15:04: {"level":30,"time":1778663704158,"pid":419151,"hostname":"llm","reqId":"req-9","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":58116},"msg":"incoming request"}
+10:15:04: {"level":30,"time":1778663704158,"pid":419151,"hostname":"llm","msg":"Novo pedido. Thread: req-54aa222c-f0cd-44a6-8ac7-3c7fcc920dfb, Agent: cmamvd3n4000..."}
+10:15:07: {"level":30,"time":1778663707742,"pid":419151,"hostname":"llm","reqId":"req-9","res":{"statusCode":200},"responseTime":3583.9412419945,"msg":"request completed"}
+10:15:19: {"level":30,"time":1778663719128,"pid":419151,"hostname":"llm","reqId":"req-a","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":46354},"msg":"incoming request"}
+10:15:19: {"level":30,"time":1778663719129,"pid":419151,"hostname":"llm","msg":"Novo pedido. Thread: req-26609d93-97c0-4adc-ade0-d4847c2d032c, Agent: cmamvd3n4000..."}
+10:15:24: {"level":30,"time":1778663724447,"pid":419151,"hostname":"llm","reqId":"req-a","res":{"statusCode":200},"responseTime":5318.393455997109,"msg":"request completed"}
+10:19:59: {"level":30,"time":1778663999658,"pid":419151,"hostname":"llm","reqId":"req-b","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":36610},"msg":"incoming request"}
+10:19:59: {"level":30,"time":1778663999659,"pid":419151,"hostname":"llm","msg":"Novo pedido. Thread: req-ba5ec1f8-3a6c-41a7-9207-baebd04daf6c, Agent: cmamvd3n4000..."}
+10:20:03: {"level":30,"time":1778664003274,"pid":419151,"hostname":"llm","reqId":"req-b","res":{"statusCode":200},"responseTime":3615.742941007018,"msg":"request completed"}
+10:20:23: {"level":30,"time":1778664023090,"pid":419151,"hostname":"llm","reqId":"req-c","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":49086},"msg":"incoming request"}
+10:20:23: {"level":30,"time":1778664023091,"pid":419151,"hostname":"llm","msg":"Novo pedido. Thread: req-dd8199b2-a398-4342-a199-4273bc00f272, Agent: cmamvd3n4000..."}
+10:20:29: {"level":30,"time":1778664029647,"pid":419151,"hostname":"llm","reqId":"req-c","res":{"statusCode":200},"responseTime":6556.189234003425,"msg":"request completed"}
+10:27:43: {"level":30,"time":1778664463166,"pid":443406,"hostname":"llm","msg":"Server listening at http://127.0.0.1:4000"}
+10:27:43: ========================================
+10:27:43:  Adaptador IAEDU v6 (Multi-Tenant)
+10:27:43: ========================================
+10:27:43:  Porta: 4000
+10:27:43:  Host: 127.0.0.1
+10:27:43:  Modo: Multi-tenant por headers
+10:27:43: 
+10:27:43:  Headers requeridos:
+10:27:43:    x-iaedu-api-key: API key da IAEDU
+10:27:43:    x-iaedu-channel-id: ID do canal
+10:27:43: 
+10:27:43:  Headers opcionais:
+10:27:43:    x-iaedu-agent-id: ID do agent (default: cmamvd3n4...)
+10:27:43: ========================================
+10:27:56: {"level":30,"time":1778664476912,"pid":443406,"hostname":"llm","reqId":"req-1","req":{"method":"GET","url":"/health","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":40022},"msg":"incoming request"}
+10:27:56: {"level":30,"time":1778664476917,"pid":443406,"hostname":"llm","reqId":"req-1","res":{"statusCode":200},"responseTime":4.590892001986504,"msg":"request completed"}
+10:36:18: {"level":30,"time":1778664978051,"pid":443406,"hostname":"llm","reqId":"req-2","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":59326},"msg":"incoming request"}
+10:36:18: {"level":30,"time":1778664978082,"pid":443406,"hostname":"llm","msg":"Novo pedido. Thread: req-8161ce4c-bfd1-4e01-beb2-36aaa8352852, Agent: cmamvd3n4000..."}
+10:36:30: {"level":30,"time":1778664990835,"pid":443406,"hostname":"llm","reqId":"req-2","res":{"statusCode":200},"responseTime":12783.72695799172,"msg":"request completed"}
+10:38:46: {"level":30,"time":1778665126347,"pid":443406,"hostname":"llm","reqId":"req-3","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":59016},"msg":"incoming request"}
+10:38:46: {"level":30,"time":1778665126348,"pid":443406,"hostname":"llm","msg":"Novo pedido. Thread: req-f71f7efe-fa99-4bcc-bf5c-0eb77ac7ccf8, Agent: cmamvd3n4000..."}
+10:38:47: {"level":30,"time":1778665127959,"pid":443406,"hostname":"llm","reqId":"req-3","res":{"statusCode":200},"responseTime":1611.18774099648,"msg":"request completed"}
+10:39:10: {"level":30,"time":1778665150354,"pid":443406,"hostname":"llm","reqId":"req-4","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":60632},"msg":"incoming request"}
+10:39:10: {"level":30,"time":1778665150355,"pid":443406,"hostname":"llm","msg":"Novo pedido. Thread: req-0a139ead-5cb7-4f0e-9d0a-f2fc05d01115, Agent: cmamvd3n4000..."}
+10:39:25: {"level":30,"time":1778665165608,"pid":443406,"hostname":"llm","reqId":"req-4","res":{"statusCode":200},"responseTime":15253.240887001157,"msg":"request completed"}
+10:43:08: {"level":30,"time":1778665388997,"pid":443406,"hostname":"llm","reqId":"req-5","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":53058},"msg":"incoming request"}
+10:43:09: {"level":30,"time":1778665388997,"pid":443406,"hostname":"llm","msg":"Novo pedido. Thread: req-bffd1911-ec2f-4334-bbd0-b90dc4de60dd, Agent: cmamvd3n4000..."}
+10:43:10: {"level":30,"time":1778665390676,"pid":443406,"hostname":"llm","reqId":"req-5","res":{"statusCode":200},"responseTime":1678.7512449920177,"msg":"request completed"}
+10:43:25: {"level":30,"time":1778665405692,"pid":443406,"hostname":"llm","reqId":"req-6","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":52040},"msg":"incoming request"}
+10:43:25: {"level":30,"time":1778665405693,"pid":443406,"hostname":"llm","msg":"Novo pedido. Thread: req-fbeea749-fe54-482e-9b86-0f49679789fe, Agent: cmamvd3n4000..."}
+10:43:27: {"level":30,"time":1778665407814,"pid":443406,"hostname":"llm","reqId":"req-6","res":{"statusCode":200},"responseTime":2122.331841006875,"msg":"request completed"}
+10:54:16: {"level":30,"time":1778666056670,"pid":443406,"hostname":"llm","reqId":"req-7","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":44840},"msg":"incoming request"}
+10:54:16: {"level":30,"time":1778666056672,"pid":443406,"hostname":"llm","msg":"Novo pedido. Thread: req-470c6cc1-a2ec-40ed-832a-16652cbda79c, Agent: cmamvd3n4000..."}
+10:54:27: {"level":30,"time":1778666067829,"pid":443406,"hostname":"llm","reqId":"req-7","res":{"statusCode":200},"responseTime":11158.086639001966,"msg":"request completed"}
+10:55:29: {"level":30,"time":1778666129384,"pid":443406,"hostname":"llm","reqId":"req-8","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":39538},"msg":"incoming request"}
+10:55:29: {"level":30,"time":1778666129384,"pid":443406,"hostname":"llm","msg":"Novo pedido. Thread: req-7d81d1a9-9a1d-49d0-ae27-72ae38560d14, Agent: cmamvd3n4000..."}
+10:55:44: {"level":30,"time":1778666144428,"pid":443406,"hostname":"llm","reqId":"req-8","res":{"statusCode":200},"responseTime":15044.370097011328,"msg":"request completed"}
+11:32:57: {"level":30,"time":1778668377083,"pid":443406,"hostname":"llm","reqId":"req-9","req":{"method":"POST","url":"/v1/chat/completions","host":"127.0.0.1:4000","remoteAddress":"127.0.0.1","remotePort":39894},"msg":"incoming request"}
+11:32:57: {"level":30,"time":1778668377083,"pid":443406,"hostname":"llm","msg":"Novo pedido. Thread: req-813d9791-c236-4a21-80b9-5083e1c2f853, Agent: cmamvd3n4000..."}
+11:32:59: {"level":30,"time":1778668379425,"pid":443406,"hostname":"llm","reqId":"req-9","res":{"statusCode":200},"responseTime":2342.56329600513,"msg":"request completed"}
+12:10:08: {"level":30,"time":1778670608853,"pid":443406,"hostname":"llm","reqId":"req-a","req":{"method":"POST","url":"/v1/chat/completions","host":"localhost:4000","remoteAddress":"127.0.0.1","remotePort":34240},"msg":"incoming request"}
+12:10:08: {"level":30,"time":1778670608854,"pid":443406,"hostname":"llm","reqId":"req-a","res":{"statusCode":400},"responseTime":1.0625530034303665,"msg":"request completed"}

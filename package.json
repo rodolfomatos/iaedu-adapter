@@ -1,0 +1,52 @@
+{
+  "name": "iaedu-adapter",
+  "version": "7.0.0",
+  "description": "Unified adapter server for OpenWebUI to iaedu.pt API integration with multi-tenancy and production hardening",
+  "main": "adapter-server.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "node adapter-server.mjs",
+    "dev": "node adapter-server.mjs",
+    "test": "node test/",
+    "test:watch": "node test/ --watch",
+    "lint": "npx eslint . --ext .js,.mjs",
+    "lint:fix": "npx eslint . --ext .js,.mjs --fix",
+    "format": "npx prettier --write .",
+    "prepare": "npm run lint",
+    "health": "curl -s http://localhost:4000/health | jq . || curl -s http://localhost:4000/health",
+    "ready": "curl -s http://localhost:4000/ready | jq . || curl -s http://localhost:4000/ready"
+  },
+  "keywords": [
+    "openwebui",
+    "iaedu",
+    "adapter",
+    "api",
+    "middleware",
+    "sse",
+    "ndjson"
+  ],
+  "author": "IAEDU Adapter Team",
+  "contributors": [
+    "Local Development Team <local@example.com>",
+    "Rodolfo Matos <rodolfomatos@example.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rodolfomatos/iaedu-adapter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rodolfomatos/iaedu-adapter/issues"
+  },
+  "homepage": "https://github.com/rodolfomatos/iaedu-adapter#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "fastify": "^5.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.2"
+  }
+}
