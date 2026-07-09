@@ -104,13 +104,6 @@ fastify.post(
       });
     }
 
-    if (!channelId) {
-      return reply.status(400).send({
-        error:
-          'Missing required configuration: IAEDU_CHANNEL_ID (via header x-iaedu-channel-id or env var)',
-      });
-    }
-
     const requestBody = request.body;
 
     // Extract user message (last message in array)
@@ -264,7 +257,7 @@ fastify.post(
         model: MODEL_NAME,
         choices: [{ index: 0, delta: {}, finish_reason: 'stop' }],
       });
-      reply.raw.write('data: ${finishChunk}\n\n');
+      reply.raw.write(`data: ${finishChunk}\n\n`);
       reply.raw.write('data: [DONE]\n\n');
       reply.raw.end();
 
@@ -421,7 +414,7 @@ process.on('uncaughtException', (err) => {
   fastify.log.error({ error: err.message }, 'Exceção não capturada');
   shutdown('UNCaughtException');
 });
-process.on('unhandledRejection', (reason, promise) => {
+process.on('unhandledRejection', (reason, _promise) => {
   fastify.log.error(
     { reason: reason.message || reason },
     'Promessa rejeitada não tratada'

@@ -1,6 +1,7 @@
 # Functional Requirements
 
 ## Core Functionality
+
 1. **Request Format Conversion**
    - Convert OpenAI API JSON requests to iaedu.pt multipart/form-data format
    - Extract user message from OpenAI messages array
@@ -30,6 +31,7 @@
    - Return appropriate HTTP error codes (400) for missing required headers
 
 ## API Endpoints
+
 1. **POST /v1/chat/completions**
    - Accepts OpenAI-format chat completion requests
    - Requires headers: x-iaedu-api-key (or x-api-key), x-iaedu-channel-id
@@ -52,6 +54,7 @@
 ## Non-Functional Requirements
 
 ### Performance
+
 - Stream responses in real-time with minimal buffering
 - Handle concurrent requests efficiently
 - Timeout protection for upstream API calls (via fetch timeout mechanisms)
@@ -59,6 +62,7 @@
 - Optimized connection settings: connectionTimeout: 0, keepAliveTimeout: 5000, setNoDelay(true)
 
 ### Reliability
+
 - Graceful error handling for API failures
 - Proper error responses to clients (400 for client errors, 500 for server errors)
 - Stream termination on errors to prevent client hanging
@@ -66,12 +70,14 @@
 - Connection resilience with keep-alive and proper headers
 
 ### Scalability
+
 - Stateless design (no server-side session storage)
 - Horizontal scaling possible behind load balancer
 - Resource cleanup after each request
 - Multi-tenant architecture allows serving many clients from single instance
 
 ### Maintainability
+
 - Clear separation of concerns in code
 - Comprehensive logging for debugging
 - Header-based configuration (no service restarts needed for credential changes)
@@ -79,12 +85,15 @@
 - Backward compatibility with OpenWebUI format expectations
 
 ## Configuration
+
 The adapter is configured entirely through HTTP headers:
+
 - **x-iaedu-api-key** (or x-api-key): Required - API key for iaedu.pt service
 - **x-iaedu-channel-id**: Required - Channel ID for iaedu.pt service
 - **x-iaedu-agent-id**: Optional - Agent ID for iaedu.pt service (defaults to cmamvd3n40000c801qeacoad2)
 
 ## Constraints
+
 - Must run on Node.js 18+
 - Must use Fastify web framework
 - Must preserve exact iaedu.pt API endpoint and authentication method

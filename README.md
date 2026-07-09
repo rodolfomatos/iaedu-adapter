@@ -151,21 +151,17 @@ Esta instalação assume que o _adapter_ corre em `/opt/iaedu-adapter` e é geri
 
         // Validate required configuration
         if (!apiKey) {
-          return reply
-            .status(400)
-            .send({
-              error:
-                'Missing required configuration: IAEDU_API_KEY (via header x-iaedu-api-key/x-api-key or env var)',
-            });
+          return reply.status(400).send({
+            error:
+              'Missing required configuration: IAEDU_API_KEY (via header x-iaedu-api-key/x-api-key or env var)',
+          });
         }
 
         if (!channelId) {
-          return reply
-            .status(400)
-            .send({
-              error:
-                'Missing required configuration: IAEDU_CHANNEL_ID (via header x-iaedu-channel-id or env var)',
-            });
+          return reply.status(400).send({
+            error:
+              'Missing required configuration: IAEDU_CHANNEL_ID (via header x-iaedu-channel-id or env var)',
+          });
         }
 
         const requestBody = request.body;

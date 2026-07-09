@@ -1,35 +1,33 @@
 import { test } from 'node:test';
 import { strict as assert } from 'node:assert';
-import { execSync } from 'node:child_process';
-import { promisify } from 'node:util';
 import fetch from 'node-fetch';
 
-const sleep = promisify(setTimeout);
+const BASE_URL = 'http://127.0.0.1:4000';
 
-test('Adapter starts and responds to health check', async () => {
-  // Start adapter in background
-  const adapterProcess = execSync('node adapter-server.mjs', {
-    stdio: ['ignore', 'pipe', 'pipe'],
-    timeout: 5000,
-  });
+test('Health endpoint returns ok', async () => {
+  const response = await fetch(`${BASE_URL}/health`);
+  assert.strictEqual(response.status, 200);
 
-  // Wait a bit for server to start
-  await sleep(1000);
+  const data = await response.json();
+  assert.strictEqual(data.status, 'ok');
+  assert.ok(data.uptime >= 0);
+  assert.strictEqual(data.version, '7-unified');
+});
 
-  try {
-    const response = await fetch('http://127.0.0.1:4000/health');
-    assert.strictEqual(response.status, 200);
+test('Ready endpoint returns status', async () => {
+  const response = await fetch(`${BASE_URL}/ready`);
+  assert.ok(response.status === 200 || response.status === 503);
 
-    const data = await response.json();
-    assert.strictEqual(data.status, 'ok');
-    assert.ok(data.uptime >= 0);
-    assert.strictEqual(data.version, '7-unified');
-  } finally {
-    // Clean up process
-    try {
-      execSync('pkill -f adapter-server.mjs', { stdio: 'ignore' });
-    } catch (err) {
-      // Ignore if process already died
-    }
-  }
+  const data = await response.json();
+  assert.ok(data.status === 'ready' || data.status === 'not_ready');
+});
+
+test('Models endpoint returns model list', async () => {
+  const response = await fetch(`${BASE_URL}/v1/models`);
+  assert.strictEqual(response.status, 200);
+
+  const data = await response.json();
+  assert.strictEqual(data.object, 'list');
+  assert.ok(Array.isArray(data.data));
+  assert.ok(data.data.length > 0);
 });

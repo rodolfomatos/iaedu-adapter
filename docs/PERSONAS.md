@@ -1,8 +1,9 @@
 # User Personas
 
 ## Primary User: Educator/Teacher
+
 - **Role**: Teacher or instructor using iaedu.pt educational AI services
-- **Goals**: 
+- **Goals**:
   - Use familiar OpenWebUI interface to access iaedu.pt's specialized educational models
   - Maintain conversation context across multiple chat sessions
   - Get real-time AI assistance for lesson planning, student queries, and educational content
@@ -13,6 +14,7 @@
   - Need for secure handling of API credentials without exposing them in configurations
 
 ## Secondary User: Student/Learner
+
 - **Role**: Student using iaedu.pt for educational assistance
 - **Goals**:
   - Access AI tutoring through a user-friendly chat interface
@@ -25,6 +27,7 @@
   - Requirement for secure handling of credentials
 
 ## Tertiary User: System Administrator
+
 - **Role**: IT staff managing the OpenWebUI and adapter deployment
 - **Goals**:
   - Deploy and maintain the adapter service with minimal ongoing maintenance
@@ -39,6 +42,7 @@
   - Desire for zero-downtime configuration updates
 
 ## New User: Platform/Service Provider
+
 - **Role**: Team providing iaedu.pt services to multiple external clients
 - **Goals**:
   - Offer iaedu.pt AI capabilities through a shared adapter infrastructure
